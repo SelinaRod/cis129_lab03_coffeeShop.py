@@ -33,7 +33,7 @@ items_sold.append((v4_title, v4_quantity, v4_price))
 
 
 print("*" *44)
-print(f"\t{(store_name.title())}")
+print('The Coffee and Muffin Shop Menu')
 print("*" * 44)
 
 # receipt practice
