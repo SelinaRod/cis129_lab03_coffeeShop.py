@@ -1,0 +1,81 @@
+# Lab practice
+print('*' * 40)
+print('The Coffee and Muffin Shop Menu')
+
+items_sold = []
+# Inpug how many coffee ordered
+print('How many coffees ordered:')
+v1_quantity = int(input("Coffee"))
+v1_title = "Coffee"
+v1_price = 5.00
+items_sold.append((v1_title, v1_quantity, v1_price))
+
+# input how many expressos ordered:
+print('How many expresso ordered:')
+v3_quantity = int(input("Expresso"))
+v3_title = "Expresso"
+v3_price = 5.50
+items_sold.append((v3_title, v3_quantity, v3_price))
+
+# input how many muffins ordered
+print('How many muffins ordered: ')
+v2_quantity = int(input('Muffins'))
+v2_title = "Muffin"
+v2_price = 4.00
+items_sold.append((v2_title, v2_quantity, v2_price))
+
+# input how many Scones
+print('How many scones ordered:')
+v4_quantity = int(input("Scones"))
+v4_title = "Scones"
+v4_price = 4.20
+items_sold.append((v4_title, v4_quantity, v4_price))
+
+
+print("*" *44)
+print(f"\t{(store_name.title())}")
+print("*" * 44)
+
+# receipt practice
+print("\tPlease Take your receipt!(: ")
+
+print('')
+#store name
+store_name = "The Coffee and Muffin Shop"
+
+# product names and prices
+v1_name, v1_quantity, v1_price = items_sold[0]
+v2_name, v2_quantity, v2_price = items_sold[1]
+v3_name, v3_quantity, v3_price = items_sold[2]
+v4_name, v4_quantity, v4_price = items_sold[3]
+
+sub_total = 0.0
+sales_tax = 0.0
+grand_total = 0.0
+
+# calculate subtotal without tax
+# Loop through items_sold list and print each item's name, quantity, and price
+for item in items_sold:
+    item_name, item_quantity, item_price = item
+    print(f"{item_name}:\t\n\t{item_quantity}  ${item_price:.2f}")
+
+
+
+# End message
+appreciation_message = "Have a great day!"
+
+# decoration line
+print('-' * 40)
+
+# Calculate subtotal, sales tax, and grand total
+sub_total = sum(item[1] * item[2] for item in items_sold)
+sales_tax = sub_total * 0.06
+grand_total = sub_total + sales_tax
+
+# Print subtotal, sales tax, and grand total
+print(f"Subtotal:\t\t\t${sub_total:.2f}")
+print(f"Sales Tax 6%:\t\t\t${sales_tax:.2f}")
+print(f"Grand Total:\t\t\t${grand_total:.2f}")
+
+# Print thank you message
+print("\nThank you for your order. Have a great day!")
